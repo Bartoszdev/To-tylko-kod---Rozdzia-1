@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="263*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="370*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFFF1313" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="output" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Margin="0,2,3,-2">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.999"/>
+                    <SkewTransform AngleX="2.8" AngleY="-0.796"/>
+                    <RotateTransform Angle="0.982"/>
+                    <TranslateTransform X="0.971" Y="-0.985"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Label Content="Sprawdzanie button'ów" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,0,0,0" Width="222" Foreground="White" FontFamily="Arial" FontSize="20"/>
+        <Button Content="Działania str. 111" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="10,59,0,0" Click="Button_Click"/>
+
     </Grid>
 </Window>
