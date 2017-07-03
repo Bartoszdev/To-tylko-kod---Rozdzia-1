@@ -8,12 +8,12 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="263*"/>
-            <RowDefinition Height="56*"/>
+            <RowDefinition Height="179*"/>
+            <RowDefinition Height="140*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="370*"/>
-            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -31,8 +31,15 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Label Content="Sprawdzanie button'ów" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="81,0,0,0" Width="222" Foreground="White" FontFamily="Arial" FontSize="20"/>
-        <Button Content="Działania str. 111" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="10,59,0,0" Click="Button_Click"/>
+        <Label Content="Sprawdzanie button'ów" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Width="222" Foreground="White" FontFamily="Arial" FontSize="20" Height="33" Grid.ColumnSpan="2"/>
+        <Button Content="Działania str. 111" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="10,38,0,0" Click="Button_Click" Height="20"/>
+        <Button Content="Instrukcja If/else str. 114" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="10,63,0,0" Height="20" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ćwiczenie to tylko kod , str .115" VerticalAlignment="Top" Grid.Column="1" Margin="26,8,0,0" Width="224" Foreground="White" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="button3" Content="Sprawdzenie kolejnego warunku" HorizontalAlignment="Left" VerticalAlignment="Top" Width="179" Grid.Column="1" Margin="10,68,0,0" Click="button3_Click"/>
+        <Button x:Name="button1" Content="Pokaż komunikat" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Margin="10,38,0,0" Grid.Column="1" Click="button1_Click"/>
+        <Button x:Name="button4" Content="Pętla" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="201,68,0,0" Click="button4_Click"/>
+        <Button x:Name="button2" Content="If/else" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="201,38,0,0" Click="button2_Click"/>
+        <TextBlock x:Name="myLabel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Margin="101,110,0,0" Height="69" Width="175"/>
 
     </Grid>
 </Window>

@@ -54,5 +54,78 @@ namespace To_tylko_kod___Rozdział_1
             
           
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            int someValue = 24;
+            if(someValue == 24)
+            {
+                output.Text = " Wartość jest równa 24";
+            }
+            else
+            {
+                output.Text = "Wartość nie jest równa 24";
+            }
+            
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            string name = "Quentin";
+            int x = 3;
+            x = x * 17;
+            double d = Math.PI / 2;
+            myLabel.Text = "nazwa to " + name
+                + "\nx jest równe " + x
+                + "\nx jest równe " + d;
+        
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            int x = 5;
+            if(x == 10)
+            {
+                myLabel.Text = "x musi być równe 10";
+            }
+            else
+            {
+                myLabel.Text = "x nie jest równe 10";
+            }
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            int someValue2 = 4;
+            string name = "Krzysiek";
+            if((someValue2 == 4) && (name.Equals("Krzysiek")))
+            {
+                myLabel.Text = "SomeValue jest równe 3 i name jest równe Janek";
+            }
+            else
+            {
+                myLabel.Text = "ten wiersz jest wykonywany bez względu na warunki";
+            }
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            int count = 0;
+            
+            while (count < 10)
+            {
+                count = count + 1;
+                
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                count = count - 1;
+            }
+
+            myLabel.Text = "Odpowiedź brzmi " + count;
+         }
+
     }
 }
