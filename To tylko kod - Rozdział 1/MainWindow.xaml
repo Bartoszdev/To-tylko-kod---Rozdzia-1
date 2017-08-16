@@ -39,7 +39,8 @@
         <Button x:Name="button1" Content="Pokaż komunikat" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Margin="10,38,0,0" Grid.Column="1" Click="button1_Click"/>
         <Button x:Name="button4" Content="Pętla" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="201,68,0,0" Click="button4_Click"/>
         <Button x:Name="button2" Content="If/else" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="201,38,0,0" Click="button2_Click"/>
-        <TextBlock x:Name="myLabel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Margin="101,110,0,0" Height="69" Width="175"/>
+        <TextBlock x:Name="myLabel" Grid.Column="1" HorizontalAlignment="Left" Margin="95,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="191"/>
+        <Button Content="Zaostrz ołówek str. 120." HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="141" Click="Button_Click_2"/>
 
     </Grid>
 </Window>

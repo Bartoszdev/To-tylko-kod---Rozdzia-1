@@ -75,7 +75,7 @@ namespace To_tylko_kod___Rozdział_1
             int x = 3;
             x = x * 17;
             double d = Math.PI / 2;
-            myLabel.Text = "nazwa to " + name
+             myLabel.Text = "nazwa to " + name
                 + "\nx jest równe " + x
                 + "\nx jest równe " + d;
         
@@ -127,5 +127,21 @@ namespace To_tylko_kod___Rozdział_1
             myLabel.Text = "Odpowiedź brzmi " + count;
          }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            int result = 0;
+            int x = 6;
+            while(x>3)
+            {
+                result = result + x;
+
+                x = x - 1;
+            }
+            for (int z = 1; z < 3; z = z + 1)
+            {
+                result = result + z;
+            }
+            myLabel.Text = "Zmienna result jest równa " + result;
+        }
     }
 }
