@@ -143,5 +143,66 @@ namespace To_tylko_kod___Rozdział_1
             }
             myLabel.Text = "Zmienna result jest równa " + result;
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            int count = 5;
+            while (count > 0)
+            {
+                count = count * 3;
+                count = count * -1; 
+
+                //Pętla wykona się tylko raz , wartość count = -15
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            int j = 2;
+            for (int i = 1; i < 100; i = i * 2)
+            {
+                j = j - i; //Pętla wykona się dokładnie siedem razy 
+                while (j < 25)
+                {
+                    j = j + 5;
+                }
+                
+            }
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            int i = 0;
+            int count = 2;
+            while ( i == 0)
+            {
+                count = count * 3;
+                count = count * -1;
+
+                //Pętla wykonuje się w nieskończoność ,int i == 0 więc while będzię zawsze wykonywane
+            }
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            while (true)
+            {
+                int i = 1; //Kolejna pętla nieskończona 
+            }
+            
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            int p = 2;
+            for (int q = 2; q < 32; q = q * 2)
+            {
+                while (p < q)
+                {
+                    p = p * 2;
+                }
+                q = p - q;
+            }
+        }
     }
 }

@@ -41,6 +41,20 @@
         <Button x:Name="button2" Content="If/else" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="201,38,0,0" Click="button2_Click"/>
         <TextBlock x:Name="myLabel" Grid.Column="1" HorizontalAlignment="Left" Margin="95,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="55" Width="191"/>
         <Button Content="Zaostrz ołówek str. 120." HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="141" Click="Button_Click_2"/>
+        <Button Content="Pętla 1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="10,113,0,0" Click="Button_Click_3"/>
+        <Button Content="Pętla 3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="118,113,0,0" RenderTransformOrigin="0.5,0.5" Click="Button_Click_4">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.939"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Pętla 2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="63,113,0,0" Click="Button_Click_5"/>
+        <Button Content="Pętla 4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="172,113,0,0" Click="Button_Click_6"/>
+        <Button Content="Pętla 5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="10,138,0,0" Click="Button_Click_7"/>
 
     </Grid>
 </Window>
