@@ -202,7 +202,47 @@ namespace To_tylko_kod___Rozdział_1
                     p = p * 2;
                 }
                 q = p - q;
+
+                //pętla wykona się osiem razy ( q = p - q) 
             }
         }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            int x = 3;
+            string result = "";
+
+            while (x > 0)
+            {
+
+
+                if (x > 2)
+                {
+                    result = result + "a";
+                }
+                x = x - 1;
+
+                result = result + "-";
+
+
+                if (x == 2)
+                {
+                    result = result + "b c";
+                }
+                
+
+                if (x == 1)
+                {
+                    result = result + "d";
+
+                    x = x - 1;
+                }
+
+                output.Text = result;
+
+                //wynik programu to a-b c-d
+            }
+        }
+
     }
 }
