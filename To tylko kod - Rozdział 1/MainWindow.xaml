@@ -56,6 +56,7 @@
         <Button Content="Pętla 4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="172,113,0,0" Click="Button_Click_6"/>
         <Button Content="Pętla 5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="10,138,0,0" Click="Button_Click_7"/>
         <Button Content="Magnesy z kodem str 124." HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Margin="63,149,0,0" Click="Button_Click_8"/>
+        <Button Content="Zagadkowy basen 126 str." HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="156" Click="Button_Click_9"/>
 
     </Grid>
 </Window>

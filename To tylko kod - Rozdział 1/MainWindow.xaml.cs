@@ -244,5 +244,42 @@ namespace To_tylko_kod___Rozdział_1
             }
         }
 
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            int x = 0;
+            string poem = "";
+
+            while(x < 4)
+            {
+                poem = poem + "a";
+
+                if(x < 1)
+                {
+                    poem = poem + " ";
+                }
+
+                poem = poem + "n";
+
+                if (x > 1)
+                {
+                    poem = poem + " oyster";
+
+                    x = x + 2;
+                }
+                if(x == 1)
+                {
+                    poem = poem + "noys ";
+                }
+                if(x < 1)
+                {
+                    poem = poem + "oise ";
+                }
+
+                x = x + 1;
+            }
+
+            output.Text = poem;
+        }
+
     }
 }
