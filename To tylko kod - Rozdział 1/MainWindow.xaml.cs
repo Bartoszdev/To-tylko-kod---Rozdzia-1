@@ -281,5 +281,7 @@ namespace To_tylko_kod___Rozdział_1
             output.Text = poem;
         }
 
+        // wynik programu to a noise annoys an oyster
+
     }
 }
