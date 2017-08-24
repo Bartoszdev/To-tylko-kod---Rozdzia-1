@@ -99,7 +99,7 @@ namespace To_tylko_kod___Rozdział_1
         {
             int someValue2 = 4;
             string name = "Krzysiek";
-            if((someValue2 == 4) && (name.Equals("Krzysiek")))
+            if((someValue2 == 8) && (name.Equals("Tadeusz")))
             {
                 myLabel.Text = "SomeValue jest równe 3 i name jest równe Janek";
             }
