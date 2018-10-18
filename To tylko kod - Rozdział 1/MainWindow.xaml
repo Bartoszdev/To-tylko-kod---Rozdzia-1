@@ -29,8 +29,7 @@
                     <RotateTransform Angle="0.982"/>
                     <TranslateTransform X="0.971" Y="-0.985"/>
                 </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+            </TextBlock.RenderTransform></TextBlock>
         <Label Content="Sprawdzanie button'ów" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Width="222" Foreground="White" FontFamily="Arial" FontSize="20" Height="33" Grid.ColumnSpan="2"/>
         <Button Content="Działania str. 111" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="10,38,0,0" Click="Button_Click" Height="20"/>
         <Button Content="Instrukcja If/else str. 114" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Margin="10,63,0,0" Height="20" Click="Button_Click_1"/>

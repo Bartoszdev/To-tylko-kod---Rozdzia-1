@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chapter_5_Encapsulation
 {
-    class DinnerParty
+    class DinnerParty : Party
     {
+        Party partyDinner = new Party();
         public const int CostOfFoodPerPerson = 25;
         public int NumberOfPeople { get; set; }
         public bool FancyDecorations { get; set; }
@@ -15,7 +16,9 @@ namespace Chapter_5_Encapsulation
 
         public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecorations)
         {
-
+            NumberOfPeople = numberOfPeople;
+            HealthyOption = healthyOption;
+            FancyDecorations = fancyDecorations;
         }
       
         private decimal CalculateCostOfDecorations()
@@ -46,14 +49,16 @@ namespace Chapter_5_Encapsulation
             return costOfBeveragesPerPerson;
         }
 
-        public decimal Cost()
+        public decimal Cost
         {
-            decimal TotalCost = (CalculateCostOfDecorations() + CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople;
+             get {
+                partyDinner.NumberOfPeople = NumberOfPeople;
+                decimal TotalCost = (CalculateCostOfDecorations() + CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople + partyDinner.AddedCostForPerson;
 
-            if (HealthyOption)
-                return TotalCost * 0.95M;
-            return TotalCost;
-
+                if (HealthyOption)
+                    return TotalCost * 0.95M;
+                return TotalCost;
+            }
             
         }
 

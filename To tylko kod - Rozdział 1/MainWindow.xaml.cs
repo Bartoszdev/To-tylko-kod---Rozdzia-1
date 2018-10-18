@@ -50,15 +50,15 @@ namespace To_tylko_kod___Rozdział_1
             bool yesNo = false;
             bool anotherBool = true;
             yesNo = !anotherBool;
-  
-            
-          
+
+
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             int someValue = 24;
-            if(someValue == 24)
+            if (someValue == 24)
             {
                 output.Text = " Wartość jest równa 24";
             }
@@ -66,7 +66,7 @@ namespace To_tylko_kod___Rozdział_1
             {
                 output.Text = "Wartość nie jest równa 24";
             }
-            
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -75,17 +75,17 @@ namespace To_tylko_kod___Rozdział_1
             int x = 3;
             x = x * 17;
             double d = Math.PI / 2;
-             myLabel.Text = "nazwa to " + name
-                + "\nx jest równe " + x
-                + "\nx jest równe " + d;
-        
+            myLabel.Text = "nazwa to " + name
+               + "\nx jest równe " + x
+               + "\nx jest równe " + d;
+
 
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             int x = 5;
-            if(x == 10)
+            if (x == 10)
             {
                 myLabel.Text = "x musi być równe 10";
             }
@@ -99,7 +99,7 @@ namespace To_tylko_kod___Rozdział_1
         {
             int someValue2 = 4;
             string name = "Krzysiek";
-            if((someValue2 == 8) && (name.Equals("Tadeusz")))
+            if ((someValue2 == 8) && (name.Equals("Tadeusz")))
             {
                 myLabel.Text = "SomeValue jest równe 3 i name jest równe Janek";
             }
@@ -112,11 +112,11 @@ namespace To_tylko_kod___Rozdział_1
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             int count = 0;
-            
+
             while (count < 10)
             {
                 count = count + 1;
-                
+
             }
 
             for (int i = 0; i < 5; i++)
@@ -125,13 +125,13 @@ namespace To_tylko_kod___Rozdział_1
             }
 
             myLabel.Text = "Odpowiedź brzmi " + count;
-         }
+        }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             int result = 0;
             int x = 6;
-            while(x>3)
+            while (x > 3)
             {
                 result = result + x;
 
@@ -150,7 +150,7 @@ namespace To_tylko_kod___Rozdział_1
             while (count > 0)
             {
                 count = count * 3;
-                count = count * -1; 
+                count = count * -1;
 
                 //Pętla wykona się tylko raz , wartość count = -15
             }
@@ -166,7 +166,7 @@ namespace To_tylko_kod___Rozdział_1
                 {
                     j = j + 5;
                 }
-                
+
             }
         }
 
@@ -174,7 +174,7 @@ namespace To_tylko_kod___Rozdział_1
         {
             int i = 0;
             int count = 2;
-            while ( i == 0)
+            while (i == 0)
             {
                 count = count * 3;
                 count = count * -1;
@@ -189,7 +189,7 @@ namespace To_tylko_kod___Rozdział_1
             {
                 int i = 1; //Kolejna pętla nieskończona 
             }
-            
+
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
@@ -229,7 +229,7 @@ namespace To_tylko_kod___Rozdział_1
                 {
                     result = result + "b c";
                 }
-                
+
 
                 if (x == 1)
                 {
@@ -249,11 +249,11 @@ namespace To_tylko_kod___Rozdział_1
             int x = 0;
             string poem = "";
 
-            while(x < 4)
+            while (x < 4)
             {
                 poem = poem + "a";
 
-                if(x < 1)
+                if (x < 1)
                 {
                     poem = poem + " ";
                 }
@@ -266,11 +266,11 @@ namespace To_tylko_kod___Rozdział_1
 
                     x = x + 2;
                 }
-                if(x == 1)
+                if (x == 1)
                 {
                     poem = poem + "noys ";
                 }
-                if(x < 1)
+                if (x < 1)
                 {
                     poem = poem + "oise ";
                 }
@@ -281,7 +281,10 @@ namespace To_tylko_kod___Rozdział_1
             output.Text = poem;
         }
 
+
         // wynik programu to a noise annoys an oyster
+
+
 
     }
 }
