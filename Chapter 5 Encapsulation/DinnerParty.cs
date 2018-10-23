@@ -8,10 +8,6 @@ namespace Chapter_5_Encapsulation
 {
     class DinnerParty : Party
     {
-        Party partyDinner = new Party();
-        public const int CostOfFoodPerPerson = 25;
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
         public bool HealthyOption { get; set; }
 
         public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecorations)
@@ -20,21 +16,6 @@ namespace Chapter_5_Encapsulation
             HealthyOption = healthyOption;
             FancyDecorations = fancyDecorations;
         }
-      
-        private decimal CalculateCostOfDecorations()
-        {
-            decimal costOfDecorations;
-            if (FancyDecorations)
-            {
-                costOfDecorations = (NumberOfPeople * 15) + 50.0M;
-            }
-            else
-            {
-                costOfDecorations = (NumberOfPeople * 7.50M) + 30.0M;
-            }
-            return costOfDecorations;
-        }
-
         private decimal CalculateCostOfBeveragesPerPerson()
         {
             decimal costOfBeveragesPerPerson;
@@ -49,11 +30,11 @@ namespace Chapter_5_Encapsulation
             return costOfBeveragesPerPerson;
         }
 
-        public decimal Cost
+        public override decimal Cost
         {
              get {
-                partyDinner.NumberOfPeople = NumberOfPeople;
-                decimal TotalCost = (CalculateCostOfDecorations() + CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople + partyDinner.AddedCostForPerson;
+                decimal TotalCost = base.Cost;
+                TotalCost += CalculateCostOfBeveragesPerPerson() * NumberOfPeople;
 
                 if (HealthyOption)
                     return TotalCost * 0.95M;
