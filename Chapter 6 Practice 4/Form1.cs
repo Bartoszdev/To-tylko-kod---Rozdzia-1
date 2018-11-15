@@ -16,6 +16,7 @@ namespace Chapter_6_Practice_4
         public Form1()
         {
             InitializeComponent();
+            workerBeeJob.SelectedIndex = 0;
             Worker[] workers = new Worker[4];
             workers[0] = new Worker(new string[] { "Zbieranie nektaru", "Wytwarzanie miodu" });
             workers[1] = new Worker(new string[] { "Pielęgnacja jaj", "Nauczanie pszczółek"});
@@ -29,14 +30,17 @@ namespace Chapter_6_Practice_4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Queen queenObject = new Queen();
-            queenObject.AssignWork(workerBeeJob.Text, (int)shifts.Value);
-            
+            if(queen.AssignWork(workerBeeJob.Text, (int)shifts.Value) == false)
+            MessageBox.Show("Nie ma dostępnych robotnic do wykonania zadania '" + workerBeeJob.Text + "'", "Królowa pszczół mówi...");
+            else
+            MessageBox.Show("Zadanie '" + workerBeeJob.Text + "' będzie ukończone za " + shifts.Value + " zmiany", "Królowa pszczół mówi...");
+           
 
         }
 
         private void nextShift_Click(object sender, EventArgs e)
         {
+           report.Text = queen.WorkTheNextShift();
 
         }
     }

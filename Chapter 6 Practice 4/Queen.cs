@@ -16,16 +16,31 @@ namespace Chapter_6_Practice_4
         private int shiftNumber = 0;
 
       
-        public bool AssignWork(string workerBee, int shifts)
+        public bool AssignWork(string job, int shifts)
         {
-
-            
-
-
+            for (int i = 0; i < workers.Length; i++)
+                if (workers[i].DoThisJob(job, shifts))
+                    return true;
+                return false;
         }
         public string WorkTheNextShift()
         {
-
+            shiftNumber++;
+            string report = "Raport zmiany numer " + shiftNumber + "\r\n";
+            for (int i = 0; i < workers.Length; i++)
+            {
+                if(workers[i].WorkOneShift())
+                    report += "Robotnica numer " + (i + 1) + " zakończyła swoje zadanie\r\n";
+                if (String.IsNullOrWhiteSpace(workers[i].CurrentJob))
+                    report += "Robotnica numer " + (i + 1) + " nie pracuje\r\n";
+                else
+                    if (workers[i].ShiftsLeft > 0)
+                    report += "Robotnica numer" + (i + 1) + " robi " + workers[i].CurrentJob + " jeszcze przez " + workers[i].ShiftsLeft
+                        + "zmiany\r\n";
+                else
+                    report += "Robotnica numer " + (i + 1) + " zakończy " + workers[i].CurrentJob + " po tej zmianie\r\n";
+            }
+            return report;
         }
     }
 }
