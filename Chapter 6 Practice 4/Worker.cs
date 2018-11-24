@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chapter_6_Practice_4
 {
-    class Worker
+    public class Worker : Bee
     {
+        private const double honeyUnitsPerShiftWorked = .65;
         private string currentJob = String.Empty;
         public string CurrentJob
         {
@@ -27,7 +28,7 @@ namespace Chapter_6_Practice_4
         private string[] jobsICanDo;
         private int shiftsToWork { get; set; }
         private int shiftsWorked { get; set; }
-        public Worker(string[] jobsICanDo)
+        public Worker(string[] jobsICanDo, double weightMg) : base (weightMg)
         {
             this.jobsICanDo = jobsICanDo;
         }
@@ -59,6 +60,13 @@ namespace Chapter_6_Practice_4
                 return true;
             }
             return false;
+        }
+
+        public override double HoneyConsumptionRate()
+        {
+            double consumption = base.HoneyConsumptionRate();
+            consumption += shiftsWorked * honeyUnitsPerShiftWorked;
+            return consumption;
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chapter_6_Practice_4
 {
-    public class Queen
+    public class Queen : Bee
     {
-        public Queen(Worker[] workers)
+        public Queen(Worker[] workers, double weightMg) : base(weightMg)
         {
             this.workers = workers;
         }
@@ -25,10 +25,14 @@ namespace Chapter_6_Practice_4
         }
         public string WorkTheNextShift()
         {
+            double honeyConsumed = HoneyConsumptionRate();
+
             shiftNumber++;
             string report = "Raport zmiany numer " + shiftNumber + "\r\n";
             for (int i = 0; i < workers.Length; i++)
             {
+                honeyConsumed += workers[i].HoneyConsumptionRate();
+
                 if(workers[i].WorkOneShift())
                     report += "Robotnica numer " + (i + 1) + " zakończyła swoje zadanie\r\n";
                 if (String.IsNullOrWhiteSpace(workers[i].CurrentJob))
@@ -40,6 +44,8 @@ namespace Chapter_6_Practice_4
                 else
                     report += "Robotnica numer " + (i + 1) + " zakończy " + workers[i].CurrentJob + " po tej zmianie\r\n";
             }
+            report += "Całkowite spożycie miodu: " + honeyConsumed + " jednostek\r\n";
+
             return report;
         }
     }

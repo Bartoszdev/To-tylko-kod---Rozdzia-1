@@ -90,8 +90,7 @@
             "Pielęgnacja jaj",
             "Nauczanie pszczółek",
             "Utrzymanie ula",
-            "Patrol z żądłami",
-            ""});
+            "Patrol z żądłami"});
             this.workerBeeJob.Location = new System.Drawing.Point(10, 37);
             this.workerBeeJob.Name = "workerBeeJob";
             this.workerBeeJob.Size = new System.Drawing.Size(189, 21);
