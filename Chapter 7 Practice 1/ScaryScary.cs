@@ -8,15 +8,15 @@ namespace Chapter_7_Practice_1
     {
         private int numberOfScaryThings;
 
-        public ScaryScary(int numberOfScaryThings) : base("napis")
+        public ScaryScary(string funnyThingIHave ,int numberOfScaryThings) : base(funnyThingIHave)
         {
             this.numberOfScaryThings = numberOfScaryThings;
         }
-        public string ScaryThingIHave { get { return numberOfScaryThings + "pająków"; } }
+        public string ScaryThingIHave { get { return "Mam " + numberOfScaryThings + " pająków"; } }
 
         public void ScareLittleChildren()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Nie możesz mieć mojego " + base.funnyThingIHave);
         }
     }
 }

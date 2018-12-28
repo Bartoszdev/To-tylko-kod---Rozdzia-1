@@ -6,8 +6,16 @@ namespace Chapter_7_Practice_1
     {
         static void Main(string[] args)
         {
-            TallGuy Guy = new TallGuy { Name = "Adam", Height = 190 };
-            Guy.TalkToYourself();
+            FunnyFunny someFunnyClown = new ScaryScary("duże buty", 35);
+
+            IScaryClown someOtherScaryClown;
+            if (someFunnyClown is ScaryScary)
+            {
+                someOtherScaryClown = someFunnyClown as ScaryScary;
+                someOtherScaryClown.Honk();
+                Console.ReadKey();
+            }
+            
         }
     }
 }
